@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+    <PostConversionRemoveFromScc>;C:\DSCXN\Projects\CCCET\CCCET\Properties\Database.sqldeployment;C:\DSCXN\Projects\CCCET\CCCET\Properties\Database.sqlsettings;Properties\Database.sqlsettings;Properties\Database.sqldeployment;Properties\Database.sqlcmdvars;Properties\Database.sqlpermissions;C:\DSCXN\Projects\CCCET\CCCET\CCCET.dbproj</PostConversionRemoveFromScc>
+    <PostConversionAddToScc>
+    </PostConversionAddToScc>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>CCCET</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+    <RootNamespace>CCCET</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{da270f58-38f0-4574-95c1-fb17066e16ef}</ProjectGuid>
+    <GenerateDatabaseFile>False</GenerateDatabaseFile>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <SqlServerVerification>False</SqlServerVerification>
+    <TargetLanguage>CS</TargetLanguage>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <AnsiNullDefault>True</AnsiNullDefault>
+    <AnsiNulls>True</AnsiNulls>
+    <AnsiPadding>True</AnsiPadding>
+    <AnsiWarnings>True</AnsiWarnings>
+    <ArithAbort>True</ArithAbort>
+    <ConcatNullYieldsNull>True</ConcatNullYieldsNull>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseState>ONLINE</DatabaseState>
+    <UpdateOptions>READ_WRITE</UpdateOptions>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>NONE</PageVerify>
+    <ServiceBrokerOption>DisableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <DefaultFileStreamFilegroup />
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Schema Objects\" />
+    <Folder Include="Project Scripts" />
+    <Folder Include="Project Scripts\InitialDeployment" />
+    <Folder Include="Project Scripts\InitialDeployment\PostDeploy" />
+    <Folder Include="Project Scripts\InitialDeployment\PostDeployChanges" />
+    <Folder Include="Project Scripts\InitialDeployment\PreDeploy" />
+    <Folder Include="Project Scripts\InitialDeployment\PreDeployChanges" />
+    <Folder Include="Project Scripts\InitialDeployment\Publish XML" />
+    <Folder Include="Database Objects" />
+    <Folder Include="Database Objects\Database Triggers" />
+    <Folder Include="Database References" />
+    <Folder Include="Database Security" />
+    <Folder Include="Database Security\Database Roles" />
+    <Folder Include="Database Security\Service Broker" />
+    <Folder Include="Database Security\Service Broker\Routes" />
+    <Folder Include="Database Security\Users" />
+    <Folder Include="Schema Objects\admin" />
+    <Folder Include="Schema Objects\admin\Programmability" />
+    <Folder Include="Schema Objects\admin\Programmability\Defaults" />
+    <Folder Include="Schema Objects\admin\Programmability\Functions" />
+    <Folder Include="Schema Objects\admin\Programmability\Rules" />
+    <Folder Include="Schema Objects\admin\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\admin\Programmability\Types" />
+    <Folder Include="Schema Objects\admin\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\admin\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\admin\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\admin\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\admin\Service Broker" />
+    <Folder Include="Schema Objects\admin\Service Broker\Queues" />
+    <Folder Include="Schema Objects\admin\Synonyms" />
+    <Folder Include="Schema Objects\admin\Tables" />
+    <Folder Include="Schema Objects\admin\Tables\Constraints" />
+    <Folder Include="Schema Objects\admin\Tables\Indexes" />
+    <Folder Include="Schema Objects\admin\Tables\Keys" />
+    <Folder Include="Schema Objects\admin\Tables\Statistics" />
+    <Folder Include="Schema Objects\admin\Tables\Triggers" />
+    <Folder Include="Schema Objects\admin\Views" />
+    <Folder Include="Schema Objects\admin\Views\Indexes" />
+    <Folder Include="Schema Objects\admin\Views\Statistics" />
+    <Folder Include="Schema Objects\admin\Views\Triggers" />
+    <Folder Include="Schema Objects\contact" />
+    <Folder Include="Schema Objects\contact\Programmability" />
+    <Folder Include="Schema Objects\contact\Programmability\Defaults" />
+    <Folder Include="Schema Objects\contact\Programmability\Functions" />
+    <Folder Include="Schema Objects\contact\Programmability\Rules" />
+    <Folder Include="Schema Objects\contact\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\contact\Programmability\Types" />
+    <Folder Include="Schema Objects\contact\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\contact\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\contact\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\contact\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\contact\Service Broker" />
+    <Folder Include="Schema Objects\contact\Service Broker\Queues" />
+    <Folder Include="Schema Objects\contact\Synonyms" />
+    <Folder Include="Schema Objects\contact\Tables" />
+    <Folder Include="Schema Objects\contact\Tables\Constraints" />
+    <Folder Include="Schema Objects\contact\Tables\Indexes" />
+    <Folder Include="Schema Objects\contact\Tables\Keys" />
+    <Folder Include="Schema Objects\contact\Tables\Statistics" />
+    <Folder Include="Schema Objects\contact\Tables\Triggers" />
+    <Folder Include="Schema Objects\contact\Views" />
+    <Folder Include="Schema Objects\contact\Views\Indexes" />
+    <Folder Include="Schema Objects\contact\Views\Statistics" />
+    <Folder Include="Schema Objects\contact\Views\Triggers" />
+    <Folder Include="Schema Objects\dbo" />
+    <Folder Include="Schema Objects\dbo\Programmability" />
+    <Folder Include="Schema Objects\dbo\Programmability\Defaults" />
+    <Folder Include="Schema Objects\dbo\Programmability\Functions" />
+    <Folder Include="Schema Objects\dbo\Programmability\Rules" />
+    <Folder Include="Schema Objects\dbo\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\dbo\Programmability\Types" />
+    <Folder Include="Schema Objects\dbo\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\dbo\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\dbo\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\dbo\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\dbo\Service Broker" />
+    <Folder Include="Schema Objects\dbo\Service Broker\Queues" />
+    <Folder Include="Schema Objects\dbo\Synonyms" />
+    <Folder Include="Schema Objects\dbo\Tables" />
+    <Folder Include="Schema Objects\dbo\Tables\Constraints" />
+    <Folder Include="Schema Objects\dbo\Tables\Indexes" />
+    <Folder Include="Schema Objects\dbo\Tables\Keys" />
+    <Folder Include="Schema Objects\dbo\Tables\Statistics" />
+    <Folder Include="Schema Objects\dbo\Tables\Triggers" />
+    <Folder Include="Schema Objects\dbo\Views" />
+    <Folder Include="Schema Objects\dbo\Views\Indexes" />
+    <Folder Include="Schema Objects\dbo\Views\Statistics" />
+    <Folder Include="Schema Objects\dbo\Views\Triggers" />
+    <Folder Include="Schema Objects\organization" />
+    <Folder Include="Schema Objects\organization\Programmability" />
+    <Folder Include="Schema Objects\organization\Programmability\Defaults" />
+    <Folder Include="Schema Objects\organization\Programmability\Functions" />
+    <Folder Include="Schema Objects\organization\Programmability\Rules" />
+    <Folder Include="Schema Objects\organization\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\organization\Programmability\Types" />
+    <Folder Include="Schema Objects\organization\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\organization\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\organization\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\organization\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\organization\Service Broker" />
+    <Folder Include="Schema Objects\organization\Service Broker\Queues" />
+    <Folder Include="Schema Objects\organization\Synonyms" />
+    <Folder Include="Schema Objects\organization\Tables" />
+    <Folder Include="Schema Objects\organization\Tables\Constraints" />
+    <Folder Include="Schema Objects\organization\Tables\Indexes" />
+    <Folder Include="Schema Objects\organization\Tables\Keys" />
+    <Folder Include="Schema Objects\organization\Tables\Statistics" />
+    <Folder Include="Schema Objects\organization\Tables\Triggers" />
+    <Folder Include="Schema Objects\organization\Views" />
+    <Folder Include="Schema Objects\organization\Views\Indexes" />
+    <Folder Include="Schema Objects\organization\Views\Statistics" />
+    <Folder Include="Schema Objects\organization\Views\Triggers" />
+    <Folder Include="Schema Objects\reference" />
+    <Folder Include="Schema Objects\reference\Programmability" />
+    <Folder Include="Schema Objects\reference\Programmability\Defaults" />
+    <Folder Include="Schema Objects\reference\Programmability\Functions" />
+    <Folder Include="Schema Objects\reference\Programmability\Rules" />
+    <Folder Include="Schema Objects\reference\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\reference\Programmability\Types" />
+    <Folder Include="Schema Objects\reference\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\reference\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\reference\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\reference\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\reference\Service Broker" />
+    <Folder Include="Schema Objects\reference\Service Broker\Queues" />
+    <Folder Include="Schema Objects\reference\Synonyms" />
+    <Folder Include="Schema Objects\reference\Tables" />
+    <Folder Include="Schema Objects\reference\Tables\Constraints" />
+    <Folder Include="Schema Objects\reference\Tables\Indexes" />
+    <Folder Include="Schema Objects\reference\Tables\Keys" />
+    <Folder Include="Schema Objects\reference\Tables\Statistics" />
+    <Folder Include="Schema Objects\reference\Tables\Triggers" />
+    <Folder Include="Schema Objects\reference\Views" />
+    <Folder Include="Schema Objects\reference\Views\Indexes" />
+    <Folder Include="Schema Objects\reference\Views\Statistics" />
+    <Folder Include="Schema Objects\reference\Views\Triggers" />
+    <Folder Include="Schema Objects\user" />
+    <Folder Include="Schema Objects\user\Programmability" />
+    <Folder Include="Schema Objects\user\Programmability\Defaults" />
+    <Folder Include="Schema Objects\user\Programmability\Functions" />
+    <Folder Include="Schema Objects\user\Programmability\Rules" />
+    <Folder Include="Schema Objects\user\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\user\Programmability\Types" />
+    <Folder Include="Schema Objects\user\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\user\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\user\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\user\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\user\Service Broker" />
+    <Folder Include="Schema Objects\user\Service Broker\Queues" />
+    <Folder Include="Schema Objects\user\Synonyms" />
+    <Folder Include="Schema Objects\user\Tables" />
+    <Folder Include="Schema Objects\user\Tables\Constraints" />
+    <Folder Include="Schema Objects\user\Tables\Indexes" />
+    <Folder Include="Schema Objects\user\Tables\Keys" />
+    <Folder Include="Schema Objects\user\Tables\Statistics" />
+    <Folder Include="Schema Objects\user\Tables\Triggers" />
+    <Folder Include="Schema Objects\user\Views" />
+    <Folder Include="Schema Objects\user\Views\Indexes" />
+    <Folder Include="Schema Objects\user\Views\Statistics" />
+    <Folder Include="Schema Objects\user\Views\Triggers" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Project Scripts\InitialDeployment\PostDeploy\PostDeployChanges.script.sql" />
+    <None Include="Project Scripts\InitialDeployment\PostDeploy\PostDeployment.script.sql" />
+    <None Include="Project Scripts\InitialDeployment\PreDeploy\PreDeployChanges.script.sql" />
+    <None Include="Project Scripts\InitialDeployment\PreDeploy\PreDeployment.script.sql" />
+    <None Include="Project Scripts\InitialDeployment\PreDeployChanges\PreDeployChangesTemplate.script.sql" />
+    <Build Include="Database Security\Service Broker\Routes\AutoCreatedLocal.route.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Project Scripts\InitialDeployment\Publish XML\CreateLocal.publish.xml" />
+    <None Include="Project Scripts\InitialDeployment\Project notes and Comments.comments.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Project Scripts\InitialDeployment\PostDeployChanges\PostDeployChangesTemplate.script.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema Objects\users.schema.sql" />
+    <Build Include="Schema Objects\admin.schema.sql" />
+    <Build Include="Schema Objects\contacts.schema.sql" />
+    <Build Include="Schema Objects\organizations.schema.sql" />
+    <Build Include="Schema Objects\reference.schema.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.CensusEmployDictionaryDS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.PlumTypeDescription.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.CensusExpendDictionaryDS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_EmpCounty.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_EmpDOS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_EmpFed.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_ExpCounty.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_ExpDOS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_ExpFed.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesCounty.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesCountyIncremental.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesDIS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesDISIncremental.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesDOS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesDOSIncremental.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesFed.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_OfficesFedIncremental.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsCounty.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsCountyIncremental.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsDIS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsDISIncremental.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsDOS.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsDOSIncremental.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsFed.table.sql" />
+    <Build Include="Schema Objects\dbo\Tables\dbo.FF_PositionsFedIncremental.table.sql" />
+  </ItemGroup>
+</Project>
